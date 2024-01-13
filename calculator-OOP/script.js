@@ -44,3 +44,10 @@ calculator.prototype.setOperation = function (op) {
   outputSecond.textContent = this.secondNumber + this.operation;
   outputFirst.textContent = "";
 };
+
+calculator.prototype.operations = {
+  add: (a, b) => a + b,
+  subtraction: (a, b) => b - a,
+  divide: (a, b) => b / a,
+  multiplication: (a, b) => a * b,
+};
