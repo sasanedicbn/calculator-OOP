@@ -85,3 +85,22 @@ calculator.prototype.logicOperation = function () {
   this.secondNumber = "";
   this.operation = "";
 };
+
+calculator.prototype.displayUX = function (firstOutput, secondOutput) {
+  outputFirst.textContent = firstOutput;
+  outputSecond.textContent = secondOutput;
+};
+calculator.prototype.displayError = function (errorMessage) {
+  outputFirst.textContent = errorMessage;
+  outputSecond.textContent = "";
+};
+calculator.prototype.deleteOneElement = function () {
+  if (this.firstNumber.length > 0) {
+    this.firstNumber = this.firstNumber.slice(0, -1);
+  }
+};
+calculator.prototype.inputDecimal = function () {
+  if (!this.firstNumber.includes(".")) {
+    this.firstNumber += ".";
+  }
+};
