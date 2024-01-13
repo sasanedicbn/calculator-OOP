@@ -7,9 +7,14 @@ const dotBtn = document.querySelector(".btn-dot");
 let outputFirst = document.querySelector(".output-first");
 let outputSecond = document.querySelector(".output-secondary");
 
-function calculator(firstNumber, secondNumber, operation, result) {
-  this.firstNumber = firstNumber;
-  this.secondNumber = secondNumber;
-  this.operation = operation;
-  this.result = result;
+function calculator() {
+  this.firstNumber = "";
+  this.secondNumber = "";
+  this.operation = "";
+  this.result = null;
 }
+calculator.prototype.resetCalculator = function () {
+  this.firstNumber = "";
+  this.secondNumber = "";
+  this.operation = "";
+};
