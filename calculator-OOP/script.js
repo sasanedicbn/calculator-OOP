@@ -18,3 +18,29 @@ calculator.prototype.resetCalculator = function () {
   this.secondNumber = "";
   this.operation = "";
 };
+calculator.prototype.inputNumber = function (number) {
+  if (!this.operation || (this.operation && !this.secondNumber)) {
+    this.firstNumber += number;
+  } else if (this.operation && this.secondNumber) {
+    this.firstNumber += number;
+  }
+  return (outputFirst.textContent = this.firstNumber);
+};
+
+calculator.prototype.setOperation = function (op) {
+  if (this.result !== null) {
+    this.firstNumber = this.result.toString();
+    this.result = null;
+  }
+  if (this.secondNumber !== "") {
+    this.logicOperation();
+    this.secondNumber = this.result.toString();
+    this.result = null;
+  }
+
+  this.secondNumber = this.firstNumber;
+  this.firstNumber = "";
+  this.operation = op;
+  outputSecond.textContent = this.secondNumber + this.operation;
+  outputFirst.textContent = "";
+};
