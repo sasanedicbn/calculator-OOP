@@ -51,3 +51,37 @@ calculator.prototype.operations = {
   divide: (a, b) => b / a,
   multiplication: (a, b) => a * b,
 };
+calculator.prototype.logicOperation = function () {
+  this.firstNumber = parseFloat(this.firstNumber);
+  this.secondNumber = parseFloat(this.secondNumber);
+  switch (this.operation) {
+    case "+":
+      this.result = this.operations.add(this.firstNumber, this.secondNumber);
+      break;
+    case "-":
+      this.result = this.operations.subtraction(
+        this.firstNumber,
+        this.secondNumber
+      );
+      break;
+    case "/":
+      if (this.secondNumber === 0) {
+        this.displayError("Cannot divide by 0");
+        return;
+      }
+      this.result = this.operations.divide(this.firstNumber, this.secondNumber);
+      break;
+    case "*":
+      this.result = this.operations.multiplication(
+        this.firstNumber,
+        this.secondNumber
+      );
+      break;
+    default:
+      return;
+  }
+
+  this.firstNumber = this.result;
+  this.secondNumber = "";
+  this.operation = "";
+};
