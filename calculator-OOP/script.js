@@ -6,3 +6,10 @@ const clearBtn = document.querySelector(".btn-clear");
 const dotBtn = document.querySelector(".btn-dot");
 let outputFirst = document.querySelector(".output-first");
 let outputSecond = document.querySelector(".output-secondary");
+
+function calculator(firstNumber, secondNumber, operation, result) {
+  this.firstNumber = firstNumber;
+  this.secondNumber = secondNumber;
+  this.operation = operation;
+  this.result = result;
+}
