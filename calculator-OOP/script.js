@@ -107,3 +107,6 @@ calculator.prototype.inputDecimal = function () {
 calculator.prototype.getNum1 = function () {
   return this.firstNumber;
 };
+calculator.prototype.getNum2 = function () {
+  return this.secondNumber;
+};
