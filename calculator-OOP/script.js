@@ -116,3 +116,12 @@ calculator.prototype.getOperation = function () {
 calculator.prototype.getResult = function () {
   return this.result;
 };
+
+const logic = new calculator();
+
+numbers.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    const value = e.target.value;
+    logic.inputNumber(value);
+  });
+});
