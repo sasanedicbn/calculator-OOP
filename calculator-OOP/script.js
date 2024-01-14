@@ -131,3 +131,8 @@ operations.forEach((el) => {
     logic.setOperation(value);
   });
 });
+equal.addEventListener("click", function () {
+  result = logic.logicOperation();
+  logic.displayUX(logic.getResult(), "");
+  logic.resetCalculator();
+});
