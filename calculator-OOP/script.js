@@ -136,3 +136,7 @@ equal.addEventListener("click", function () {
   logic.displayUX(logic.getResult(), "");
   logic.resetCalculator();
 });
+clearBtn.addEventListener("click", function () {
+  logic.resetCalculator();
+  logic.displayUX();
+});
