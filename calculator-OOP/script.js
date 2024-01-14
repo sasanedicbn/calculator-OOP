@@ -144,3 +144,7 @@ deleteBtn.addEventListener("click", function () {
   logic.deleteOneElement();
   logic.displayUX(logic.getNum1(), outputSecond.textContent);
 });
+dotBtn.addEventListener("click", function () {
+  logic.inputDecimal();
+  logic.displayUX(logic.getNum1(), `${logic.getNum2()}${logic.getOperation()}`);
+});
