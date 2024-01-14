@@ -104,3 +104,6 @@ calculator.prototype.inputDecimal = function () {
     this.firstNumber += ".";
   }
 };
+calculator.prototype.getNum1 = function () {
+  return this.firstNumber;
+};
