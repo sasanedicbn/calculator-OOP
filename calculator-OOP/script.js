@@ -110,3 +110,9 @@ calculator.prototype.getNum1 = function () {
 calculator.prototype.getNum2 = function () {
   return this.secondNumber;
 };
+calculator.prototype.getOperation = function () {
+  return this.operation;
+};
+calculator.prototype.getResult = function () {
+  return this.result;
+};
