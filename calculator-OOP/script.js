@@ -125,3 +125,9 @@ numbers.forEach((el) => {
     logic.inputNumber(value);
   });
 });
+operations.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    const value = e.target.textContent;
+    logic.setOperation(value);
+  });
+});
